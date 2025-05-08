@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Selling Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center py-10">
+
+  <div class="bg-white p-6 rounded-2xl shadow-xl w-full max-w-6xl">
+    <!-- Image & Video Upload Section -->
+    <div class="flex items-center gap-2 mb-4">
+      <p class="text-sm text-gray-600 font-medium">
+        📌 Note - Upload a clear, well-lit landscape photo or video
+      </p>
+      <img src="images/phone_turn.gif" alt="Phone Turn Guide" class="w-20 h-20 object-contain inline-block">
+    </div>
+    <!-- Image & Video Upload Section -->
+<div class="mb-6">
+  <div class="flex justify-between gap-6">
+    <!-- Upload Side -->
+    <div class="w-40 h-40 border-4 border-gray-300 rounded-lg flex items-center justify-center cursor-pointer bg-gray-50">
+      <label for="uploadSide" class="text-sm text-gray-500 cursor-pointer">Upload Side</label>
+      <input id="uploadSide" type="file" accept="image/*" class="hidden" />
+    </div>
+
+    <!-- Upload Front -->
+    <div class="w-40 h-40 border-4 border-gray-300 rounded-lg flex items-center justify-center cursor-pointer bg-gray-50">
+      <label for="uploadFront" class="text-sm text-gray-500 cursor-pointer">Upload Front</label>
+      <input id="uploadFront" type="file" accept="image/*" class="hidden" />
+    </div>
+
+    <!-- Upload Rear -->
+    <div class="w-40 h-40 border-4 border-gray-300 rounded-lg flex items-center justify-center cursor-pointer bg-gray-50">
+      <label for="uploadRear" class="text-sm text-gray-500 cursor-pointer">Upload Rear</label>
+      <input id="uploadRear" type="file" accept="image/*" class="hidden" />
+    </div>
+
+    <!-- Upload Video -->
+    <div class="w-40 h-40 border-4 border-gray-300 rounded-lg flex items-center justify-center cursor-pointer bg-gray-50">
+      <label for="uploadVideo" class="text-sm text-gray-500 cursor-pointer">Upload Video</label>
+      <input id="uploadVideo" type="file" accept="video/*" class="hidden" />
+    </div>
+  </div>
+</div>
+
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Animal Details</h2>
+
+    <form id="animalForm" class="flex flex-wrap gap-6 justify-between items-end">
+      <!-- Form fields -->
+      <div class="flex flex-col">
+        <label class="text-sm font-medium text-gray-700 mb-1">Age</label>
+        <select class="w-36 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="age">
+          <option value="">Select Age Range</option>
+          <option value="0-1">0-1 Year</option>
+          <option value="2-3">2-3 Years</option>
+          <option value="4-5">4-5 Years</option>
+          <option value="6-7">6-7 Years</option>
+          <option value="8+">8+ Years</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-sm font-medium text-gray-700 mb-1">Gender</label>
+        <select class="w-36 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="gender">
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-sm font-medium text-gray-700 mb-1">Weight (kg)</label>
+        <input type="number" placeholder="e.g. 250" class="w-32 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="weight" />
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-sm font-medium text-gray-700 mb-1">No. of Animals</label>
+        <input type="number" placeholder="e.g. 3" class="w-32 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="animals" />
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-sm font-medium text-gray-700 mb-1">Price (₹)</label>
+        <input type="number" placeholder="e.g. 15000" class="w-36 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="price" />
+      </div>
+    </form>
+    <!-- additional information -->
+    <div class="w-full mt-4">
+      <label class="text-sm font-medium text-gray-700 mb-1 block">Additional Information</label>
+      <textarea name="additionalInfo" rows="4" placeholder="Describe your animal's health, feeding, behavior, etc." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Seller Details</h2>
+
+    <!-- Seller Details -->
+<div class="w-full mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- Name -->
+  <div class="flex flex-col">
+    <label class="text-sm font-medium text-gray-700 mb-1">Seller Name</label>
+    <input type="text" placeholder="Your name" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="sellerName" required />
+  </div>
+
+  <!-- Mobile Number -->
+  <div class="flex flex-col">
+    <label class="text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
+    <input type="tel" placeholder="e.g. 9876543210" pattern="[0-9]{10}" maxlength="10" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" name="mobileNumber" required />
+  </div>
+
+  <!-- Location (State Dropdown) -->
+  <div class="flex flex-col">
+    <label class="text-sm font-medium text-gray-700 mb-1">Location (State)</label>
+    <select name="location" class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      <option value="">Select State</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+      <option value="Ladakh">Ladakh</option>
+    </select>
+  </div>
+</div>
+
+    <!-- Submit and Reset -->
+    <div class="flex justify-center mt-8 gap-4">
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition" form="animalForm">
+        Submit
+      </button>
+      <button type="reset" class="bg-gray-300 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-400 transition" form="animalForm">
+        Reset
+      </button>
+    </div>
+  </div>
+
+  <!-- Go Back & Save Buttons Outside the Box -->
+  <div class="mt-6 flex gap-4">
+    <button onclick="window.location.href='cow_breeds.html'" class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition">
+      Go Back
+    </button>
+    <button onclick="saveForm()" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+      Save
+    </button>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.querySelectorAll('input[type="file"][capture="camera"]').forEach(input => {
+      input.addEventListener('click', function () {
+        input.click();
+      });
+    });
+
+    function saveForm() {
+      console.log("Form saved (placeholder).");
+      alert("Form data temporarily saved!");
+    }
+  </script>
+
+</body>
+</html>

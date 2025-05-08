@@ -1,0 +1,82 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2E8B57;
+    color: white;
+    padding: 15px 30px;
+}
+
+/* Logo section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+/* Navigation bar */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Profile and language selector */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+#language {
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.profile-btn {
+    background-color: white;
+    color: #2E8B57;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: #FFD700;
+    color: black;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livestock Marketplace</title>
+    <link rel="stylesheet" href="sell_animal.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" style="width: 80px; height: 80px; object-fit: contain;">
+            <h2>FORMFLOCK - Livestock Marketplace</h2>
+        </div>
+        <nav> 
+            <ul>
+                <li><a href="#">Market</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Pashu Tools</a></li>
+                <li><a href="#">Ration Calculator</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <select id="language">
+                <option>English</option>
+                <option>Hindi</option>
+            </select>
+            <button class="profile-btn">Profile</button>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-bar">
+        <select id="state">
+            <option>All State</option>
+            <option>Uttar Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Punjab</option>
+        </select>
+        <input type="text" placeholder="Search by breed, product etc.">
+    </section>
+
+    <!-- Livestock Listing -->
+    <section class="listing">
+        <h2>Livestock Marketplace</h2>
+        <p>Select Your Cattle to sell!</p>
+        <div class="grid">
+            <a href="cow_breeds.html">
+                <div class="category">
+                    <img src="cow_images/cow.jpg" alt="Cow">
+                    <p>Cow</p>
+                </div>
+            </a>
+            <a href="buffalo_breeds.html"><div class="category"><img src="buffalo_images/buffalo.jpg" alt="Buffalo"><p>Buffalo</p></div></a>
+            <a href="goat_breeds.html"><div class="category"><img src="goat_Images/goat.jpg" alt="Goat"><p>Goat</p></div></a>
+            <a href="sheep_breeds.html"><div class="category"><img src="Sheep_Images/sheep.jpg" alt="Sheep"><p>Sheep</p></div></a>
+            <a href="ox_breeds.html"><div class="category"><img src="ox_images/ox.jpg" alt="Ox"><p>Ox</p></div></a>
+            <a href="others_breeds.html"><div class="category"><img src="others.png" alt="Others"><p>Others</p></div></a>
+        </div>
+    </section>
+    <script src="sell_animal.js"></script>
+</body>
+</html>
